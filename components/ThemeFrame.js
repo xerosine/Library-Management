@@ -9,7 +9,7 @@ app.component('theme-frame', {
     /*html*/
     `
     <div id="theme-frame" class="col off-white text-center pt-6">
-        <img src="images/512px-Oau_logo 1.png" class="mt-5 mb-3 w-50" alt="OAU logo">
+        <img src="../images/512px-Oau_logo 1.png" class="mt-5 mb-3 w-50" alt="OAU logo">
         <div>
             <p v-if="signUp" class="my-5 my-sm-3 fs-5 fw-sm-semibold">Join our library community and gain access to a world of knowledge!</p>
             <p v-else class="my-5 my-sm-3 fs-5 fw-sm-semibold">Nice to see you again</p>

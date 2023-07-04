@@ -1,10 +1,10 @@
-app.component('overview-core', {
+app.component('dashboard-core', {
     template: 
     /*html*/
     `
     <div class="row m-0 mx-auto">
         <div class="col-6 col-md-3 p-1">
-            <div class="overview-core m-1 px-3 py-2 off-white rounded-4 position-relative">
+            <div class="dashboard-core m-1 px-3 py-2 off-white rounded-4 position-relative">
                 <p class="fw-semibold small">Total books borrowed</p>                                   
                 <div class="px-1 position-absolute bottom-0 w-75">
                     <strong class="fs-1 me-4">0</strong>                                
@@ -17,7 +17,7 @@ app.component('overview-core', {
             </div>                               
         </div>
         <div class="col-6 col-md-3 p-1">
-            <div class="overview-core m-1 px-3 py-2 off-white rounded-4 position-relative">
+            <div class="dashboard-core m-1 px-3 py-2 off-white rounded-4 position-relative">
                 <p class="fw-semibold small">Books at hand</p>                                   
                 <div class="px-1 position-absolute bottom-0 w-75">
                     <strong class="fs-1 fs-md-3 me-4">0</strong>                                
@@ -30,7 +30,7 @@ app.component('overview-core', {
             </div>                                
         </div>
         <div class="col-6 col-md-3 p-1">
-            <div class="overview-core m-1 px-3 py-2 off-white rounded-4 position-relative">
+            <div class="dashboard-core m-1 px-3 py-2 off-white rounded-4 position-relative">
                 <p class="fw-semibold small">Overdue books</p>                                   
                 <div class="px-1 position-absolute bottom-0 w-75">
                     <strong class="fs-1 fs-md-3 me-4">0</strong>                                
@@ -43,7 +43,7 @@ app.component('overview-core', {
             </div>                                
         </div>
         <div class="col-6 col-md-3 p-1">
-            <div class="overview-core m-1 px-3 py-2 off-white rounded-4 position-relative">
+            <div class="dashboard-core m-1 px-3 py-2 off-white rounded-4 position-relative">
             <p class="fw-semibold small">Borrowed books</p>                                   
                 <div class="px-1 position-absolute bottom-0 w-75">
                     <strong class="fs-1 fs-md-3 me-4">0</strong>                                

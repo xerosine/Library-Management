@@ -52,17 +52,17 @@ img {
     display: block !important;
 }
 
-.overview-core {
+.dashboard-core {
     min-height: 100px;
 }
 
-.overview-core strong {
+.dashboard-core strong {
     position: absolute;
     left: 10px;
     bottom: 10px;
 }
 
-.overview-core svg {
+.dashboard-core svg {
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -75,18 +75,65 @@ img {
 
 .card-sm {
     width: 80%;
+    word-wrap: normal;
 }
 
 .flex-row span {
         font-size: smaller;
-    }
+}
+
+.book-lg {
+    background-color: white;
+    display: none;
+}
+
+table {
+    width: 95%;
+}
+
+.t-wrap {
+    width: 70% !important;
+    border: transparent;
+    border-radius: 50%;
+}
+
+.alert {
+    position: fixed;
+    top: 13%;
+    left: 61vw;
+    transform: translateX(-50%);
+    background-color: white;
+    height: calc(920px - 85vw);
+    min-height: 450px;
+    max-width: 620px;
+    display: none;
+}
+
+.green {
+    color: #7DC68D;
+}
+
+.red {
+    color: #DB8E8E;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.alert-btn {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 @media screen and (min-width: 576px){
-    .overview-core {
+    .dashboard-core {
         min-height: 90px;
     }
 
-    .overview-core p {
+    .dashboard-core p {
         font-size: 15px !important;
     }
 
@@ -94,14 +141,27 @@ img {
         width: 32vw;
         height: calc(210px + 30vw);
     }
+
+    .card-sm {
+        width: 70%;
+    }
+
+    .alert {
+        height: 520px;
+        left: 61vw;
+    }
+
+    .alert-text {
+        line-height: 2;
+    }
 }
 
 @media screen and (min-width: 768px){
-    .overview-core {
+    .dashboard-core {
         min-height: 110px;
     }
 
-    .overview-core strong {
+    .dashboard-core strong {
         left: 7px;
         bottom: 7px;
     }
@@ -115,11 +175,28 @@ img {
         width: 25vw;
         height: calc(250px + 20vw);
     }
+    
+    #book-lg-img {
+        width: 37vw;
+        max-width: 350px;
+    }
+
+    .alert {
+        left: 57vw;
+    }
+
+    .alert-text {
+        font-size: 17px;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .card-md {
         width: auto;
         height: calc(150px + 20vw);
+    }
+
+    .card-sm {
+        width: 95%;
     }
 }

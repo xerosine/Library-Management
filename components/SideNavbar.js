@@ -68,13 +68,27 @@ app.component('side-navbar', {
         switchActive(event) {
             let element = document.getElementById(event.currentTarget.id);
             let navList = document.getElementsByClassName("navs");
+            let activeTab = document.querySelector('.active-comp .tab');
+            let bookLgModal = document.querySelector('.active-comp .book-lg');
             if (element.classList.contains('active-nav')){
+                if (bookLgModal) {
+                    bookLgModal.style.display = 'none';
+                    activeTab.style.display = 'flex';
+                    document.querySelector(".active-comp .alert-modal").style.display = 'none';
+                }
+                
                 return;
             }
             let index;
             for(let i = 0; i < navList.length; i++){
                 if (navList[i].classList.contains("active-nav")){
                     navList[i].classList.remove("active-nav");
+                    if (bookLgModal) {
+                        bookLgModal.style.display = 'none';
+                        activeTab.style.display = 'flex';
+                        document.querySelector(".active-comp .alert-modal").style.display = 'none';
+                    }
+                    ;
                     break;
                 }
             }

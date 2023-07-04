@@ -1,6 +1,6 @@
-app.component('library', {
+app.component('dashboard', {
     props: {
-        libraryBooks: {
+        recommendedBooks: {
             type: Array,
             required: true
         },
@@ -22,15 +22,20 @@ app.component('library', {
     `
     <div>
         <div class="row ms-1 mb-1">
-            <h3 class="ps-1">Library</h3>
+            <h3 class="ps-1">Dashboard</h3>
         </div>
         <div class="position-relative">
             <div class="row tab">
                 <div class="col-12 col-lg-8">
-                    <div class="row mb-3">
-                        <book-md v-for="(book, index) in libraryBooks" 
-                        :key="index" :current-tab="currentTab" 
-                        :book="book" @click="bookClick"></book-md>
+                    <dashboard-core></dashboard-core>
+                    <div>
+                        <div class="mt-5 ms-2 mb-3 rec-head fw-semibold">Recommended Books</div>
+                        <div class="row mb-3">
+                                <book-md v-for="(book, index) in recommendedBooks" 
+                                :key="index" :current-tab="currentTab" 
+                                :book="book" @click="bookClick"></book-md>
+                        </div>
+                        <overdue-list :recommended-books="recommendedBooks"></overdue-list>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 off-white">
@@ -44,13 +49,13 @@ app.component('library', {
             </div>
             <book-lg :book="largeBook" 
             :role="role" :current-tab="currentTab"
-            class="position-absolute top-0 book-lg"></book-lg>
+            class="position-absolute top-0 book-lg"></book-lg> 
         </div>
     </div>
     `,
     data() {
         return {
-            currentTab: 'library'
+            currentTab: 'dashboard'
         }
     },
     methods: {
